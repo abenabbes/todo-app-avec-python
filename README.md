@@ -6,10 +6,12 @@ consomme, dockerisé et déployé sur Render.
 
 ## 🏗️ Architecture
 
+```
 ┌─────────────────┐     HTTP/REST      ┌──────────────┐      async      ┌────────────┐
 │   Streamlit     │ ─────────────────► │   FastAPI    │ ──────────────► │ PostgreSQL │
 │  (dashboard)    │   (requests)       │   (API)      │  (SQLAlchemy)   │    (BDD)   │
 └─────────────────┘                    └──────────────┘                 └────────────┘
+```
 
 | Composant | Rôle | Port local |
 |-----------|------|------------|
@@ -20,6 +22,7 @@ consomme, dockerisé et déployé sur Render.
 
 ## 📁 Structure
 
+```
 todo-app/
 ├── api/
 │   ├── main.py           # Point d'entrée FastAPI (lifespan, CORS)
@@ -36,6 +39,7 @@ todo-app/
 ├── docker-compose.yml    # 3 services : db, api, frontend
 ├── requirements.txt
 └── .env                  # Variables locales (non committé)
+```
 
 ## 🔌 Endpoints de l'API
 
